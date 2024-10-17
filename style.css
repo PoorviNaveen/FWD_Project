@@ -1,0 +1,282 @@
+.login-home-page,
+.login-home-page * {
+  box-sizing: border-box;
+}
+.login-home-page {
+  background: #ffffff;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.login-header {
+  width: 1440px;
+  height: 205px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-4 {
+  background: #95adaf;
+  width: 100%;
+  height: 40.98%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 59.02%;
+}
+.rectangle-3 {
+  background: #1c172b;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 100%;
+  height: 67.32%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 32.68%;
+  top: 0%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.your-guide-to-near-by-culinary-treasures {
+    color: #fdeac8;
+    text-align: left;
+    font-family: "Kodchasan-Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    right: 36.18%;
+    left: 33.75%;
+    width: 30.07%;
+    bottom: 43.41%;
+    top: 43.9%;
+    height: 12.68%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.swm-icon-pack-menuhamburger {
+    width: 2.78%;
+    height: 19.51%;
+    position: absolute;
+    right: 91.94%;
+    left: 5.28%;
+    bottom: 53.66%;
+    top: 26.83%;
+    overflow: hidden;
+  }
+  .group {
+    width: 66.67%;
+    height: 41.67%;
+    position: absolute;
+    right: 16.67%;
+    left: 16.67%;
+    bottom: 29.17%;
+    top: 29.17%;
+    overflow: visible;
+}
+.whats-app-image-2024-10-17-at-1-16-12-pm-removebg-preview-1 {
+    width: 15.97%;
+    height: 81.46%;
+    position: absolute;
+    right: 45%;
+    left: 39.03%;
+    bottom: 22.93%;
+    top: -4.39%;
+    object-fit: cover;
+  }
+  ._3 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 323px;
+    position: absolute;
+    left: 558px;
+    top: 413px;
+  }
+.login {
+  color: #000000;
+  text-align: left;
+  font-family: var(
+    --single-line-body-base-font-family,
+    "Inter-Regular",
+    sans-serif
+  );
+  font-size: var(--single-line-body-base-font-size, 16px);
+  line-height: var(--single-line-body-base-line-height, 100%);
+  font-weight: var(--single-line-body-base-font-weight, 400);
+  opacity: 0.6;
+  position: relative;
+  align-self: stretch;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.login {
+    color: #000000;
+    text-align: left;
+    font-family: var(
+      --single-line-body-base-font-family,
+      "Inter-Regular",
+      sans-serif
+    );
+    font-size: var(--single-line-body-base-font-size, 16px);
+    line-height: var(--single-line-body-base-line-height, 100%);
+    font-weight: var(--single-line-body-base-font-weight, 400);
+    opacity: 0.6;
+    position: relative;
+    align-self: stretch;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  }
+  .frame-3 {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.4);
+    border-width: 1px;
+    opacity: 0.4;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 36px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .welcome {
+    color: #000000;
+    text-align: center;
+    font-family: var(
+      --single-line-body-base-font-family,
+      "Inter-Regular",
+      sans-serif
+    );
+    font-size: var(--single-line-body-base-font-size, 16px);
+    line-height: var(--single-line-body-base-line-height, 100%);
+    font-weight: var(--single-line-body-base-font-weight, 400);
+    position: relative;
+    width: 146px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  }
+  ._4 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 323px;
+    position: absolute;
+    left: 558px;
+    top: 512px;
+  }
+  ._5 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 323px;
+    position: absolute;
+    left: 558px;
+    top: 611px;
+}
+.Back {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 1308px;
+  top: 63px;
+}
+.back {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Jura-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group2 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    overflow: visible;
+  }
+  .label-4 {
+    background: #00ff37;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 121px;
+    position: absolute;
+    left: 558px;
+    top: 728px;
+  }
+  .submit {
+    color: #000000;
+  text-align: center;
+  font-family: var(
+    --single-line-body-base-font-family,
+    "Inter-Regular",
+    sans-serif
+  );
+  font-size: var(--single-line-body-base-font-size, 16px);
+  line-height: var(--single-line-body-base-line-height, 100%);
+  font-weight: var(--single-line-body-base-font-weight, 400);
+  position: relative;
+  width: 146px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.label-42 {
+    background: #ff0000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 121px;
+    position: absolute;
+    left: 760px;
+    top: 728px;
+  }
+  .cancelop {
+    color: #000000;
+    text-align: center;
+    font-family: var(
+      --single-line-body-base-font-family,
+      "Inter-Regular",
+      sans-serif
+    );
+    font-size: var(--single-line-body-base-font-size, 16px);
+  line-height: var(--single-line-body-base-line-height, 100%);
+  font-weight: var(--single-line-body-base-font-weight, 400);
+  position: relative;
+  width: 146px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.login-page {
+  color: #000000;
+  text-align: center;
+  font-family: "Jura-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 665px;
+  top: 318px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
