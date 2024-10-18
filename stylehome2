@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+.homepage {
+  background: #ffffff;
+  height: 100vh; /* Changed to viewport height for responsiveness */
+  position: relative;
+}
+
+.dall-e {
+  width: 100%;
+  height: 50%; /* Adjusted height */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 30%; /* Adjusted positioning */
+  top: 10%;
+  object-fit: cover;
+}
+
+.header {
+  background: #1c172b;
+  padding: 20px; /* Reduced padding for better spacing */
+  width: 100%; /* Changed to full width */
+  height: 100px; /* Adjusted height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex; /* Added flex for alignment */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Menu {
+  background: #fdeac8;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px; /* Adjusted positioning */
+}
+
+.group {
+  width: 70%; /* Adjusted width for better layout */
+  height: auto; /* Changed to auto for flexibility */
+  position: absolute;
+  left: 15%; /* Centered the group */
+  bottom: 30%;
+}
+
+.Login {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-end; /* Adjusted alignment */
+}
+
+.login {
+  color: #fdeac8;
+  font-family: "Jura-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #fdeac8;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 20px;
+  position: absolute;
+  left: 20%; /* Adjusted position */
+  top: 20%; /* Adjusted position */
+}
+
+.Mainlogo {
+  width: 200px; /* Adjusted size */
+  height: auto; /* Changed to auto for responsive aspect */
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%); /* Centered the logo */
+}
+
+.rectangle_dishes, .rectangle_location {
+  background: #030303;
+  border-radius: 50px;
+  opacity: 0.75;
+  width: 23%; /* Adjusted width */
+  height: 3.75%;
+  position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle_dishes {
+  right: 10%; /* Adjusted position */
+  bottom: 20%; /* Adjusted position */
+}
+
+.rectangle_location {
+  left: 10%; /* Adjusted position */
+  bottom: 20%; /* Adjusted position */
+}
+
+.search-dishes, .search-locations, .explore-maps {
+  color: #ffffff;
+  font-family: "FugazOne-Regular", sans-serif;
+  font-size: 24px;
+  position: absolute;
+  text-align: center; /* Centered text */
+}
+
+.search-dishes {
+  right: 10%;
+  bottom: 25%; /* Adjusted position */
+}
+
+.search-locations {
+  left: 10%;
+  bottom: 25%; /* Adjusted position */
+}
+
+.rectangle_maps {
+  border-radius: 0;
+  opacity: 0.75;
+  width: 23%;
+  height: 3.75%;
+  position: absolute;
+  left: 38%;
+  bottom: 40%;
+}
+
+.trending {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 80%; /* Adjusted position */
+  text-align: center; /* Centered text */
+}
+
+.trending2 {
+  color: #000000;
+  font-family: "FugazOne-Regular", sans-serif;
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centered text */
+}
+
+.local-dishes {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centered text */
+  bottom: 20%; /* Adjusted position */
+}
+
+.bottom-header {
+  background: #1c172b;
+  width: 100%;
+  height: 200px; /* Adjusted height */
+  position: absolute;
+  bottom: 0; /* Positioned at the bottom */
+}
+
+.your-guide-to-near-by-culinary-treasures2 {
+  color: #fdeac8;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centered text */
+  bottom: 15%; /* Adjusted position */
+}
+
+.return-to-top, .main-menu {
+  color: #fdeac8;
+  font-family: "Kodchasan-Medium", sans-serif;
+  font-size: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered text */
+}
+
+.return-to-top {
+  right: 10%; /* Adjusted position */
+  bottom: 20%; /* Adjusted position */
+}
+
+.main-menu {
+  left: 10%; /* Adjusted position */
+  bottom: 20%; /* Adjusted position */
+}
