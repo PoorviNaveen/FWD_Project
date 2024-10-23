@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Additional styling for input fields */
+      .input-field {
+        margin: 10px 0;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .submit, .cancelop {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .submit:hover, .cancelop:hover {
+        background-color: #4cae4c;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-home-page">
+      <div class="login-header">
+        <div class="rectangle-4"></div>
+        <div class="rectangle-3"></div>
+        <div class="your-guide-to-near-by-culinary-treasures">
+          Your Guide to nearby Culinary Treasures
+        </div>
+        <div class="swm-icon-pack-menuhamburger">
+          <a href="Sidebar.html">
+          <img class="group" src="C:\Users\user 1\Documents\FWD\menuicon.png" />
+          </a>
+        </div>
+        <img
+          class="whats-app-image-2024-10-17-at-1-16-12-pm-removebg-preview-1"
+          src="C:\Users\user 1\Documents\FWD\mainlogo.png"
+        />
+      </div>
+
+      <form id="loginForm">
+        <div class="_3 input-field">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" required />
+        </div>
+        
+        <div class="_4 input-field">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" placeholder="Enter your email ID" required />
+        </div>
+        
+        <div class="_5 input-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required />
+        </div>
+
+        <div class="Back">
+          <a href="Homepage.html">
+            <div class="back">Back</div>
+            <img class="group2" src="C:\Users\user 1\Documents\FWD\crossicon.png" />
+          </a>
+        </div>
+        
+        <div class="label-4">
+          <div class="frame-3 submit" onclick="submitForm()">Submit</div>
+        </div>
+        
+        <div class="label-42">
+          <div class="frame-3 cancelop" onclick="cancelForm()">Cancel</div>
+        </div>
+        
+        <div class="login-page">Login Page</div>
+      </form>
+    </div>
+
+    <script>
+      function submitForm() {
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Handle login logic here (e.g., send data to server)
+        console.log('Username:', username);
+        console.log('Email:', email);
+        console.log('Password:', password);
+
+        // Optionally, you can add form validation or send data via fetch/AJAX
+      }
+
+      function cancelForm() {
+        // Handle cancel action (e.g., clear the form or redirect)
+        document.getElementById('loginForm').reset();
+      }
+    </script>
+  </body>
+</html>
