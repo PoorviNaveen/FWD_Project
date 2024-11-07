@@ -1,0 +1,323 @@
+.header {
+  background: #1c172b;
+  padding: 33px 21px 33px 21px;
+  width: 100%;
+  height: 142px;
+  position: absolute;
+  left: 3.09px;
+  top: -11.53%;
+  transform-origin: 0 0;
+  transform: rotate(0.46deg) scale(1, 1);
+  overflow: hidden;
+}
+.Menu {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 50px;
+  overflow: hidden;
+}
+.group, .menugroup{
+  width: 66.67%;
+  height: 41.67%;
+  position: absolute;
+  right: 16.67%;
+  left: 16.67%;
+  bottom: 29.17%;
+  top: 29.17%;
+  overflow: visible;
+}
+.destination {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 17px;
+  top: 121px;
+}
+.destination2 {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.destgroup {
+  flex-shrink: 0;
+  width: 10px;
+  height: 5px;
+  position: relative;
+  overflow: visible;
+}
+.near-me {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 17px;
+  top: 182px;
+}
+.food {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 173px;
+  position: absolute;
+  left: 17px;
+  top: 243px;
+}
+.foods {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.foodgroup{
+  width: 41.67%;
+  height: 20.83%;
+  position: absolute;
+  right: 29.17%;
+  left: 29.17%;
+  bottom: 37.5%;
+  top: 41.67%;
+  overflow: visible;
+}
+.map {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 17px;
+  top: 304px;
+}
+.origin-of-quality {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 18px;
+  top: 365px;
+}
+.recipes {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 18px;
+  top: 426px;
+}
+.recipes2 {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.recipegroup {
+  width: 41.67%;
+  height: 20.83%;
+  position: absolute;
+  right: 29.17%;
+  left: 29.17%;
+  bottom: 37.5%;
+  top: 41.67%;
+  overflow: visible;
+}
+.feedback {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 18px;
+  top: 487px;
+}
+.dropicon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.Login {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  right:0.5%;
+  left: 1125px;
+  top: 50px;
+}
+.login {
+  color: #fdeac8;
+  text-align: center;
+  font-family: "Jura-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logingroup {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  overflow: visible;
+}
+.Back a {
+    color: #fdeac8;
+    text-decoration: none;
+    font-size: 15 px;
+    right: 10px;
+    top: 55px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+  }
+
+  .Back {
+    display: flex;
+    align-items: center;
+  }
+
+  .Back.img {
+    margin-right: 10px;
+    right: 10px;
+    top:55px;
+    width: 20px;
+    height: 20px;
+  }
+
+.subtitle {
+  color: #fdeac8;
+  text-align: left;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  left: 475px;
+  top: 85px;
+  width: 456px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Mainlogo {
+  width: 230px;
+  height: 167px;
+  position: absolute;
+  left: 500px;
+  top: -5px;
+  box-align: center;
+  object-fit: cover;
+}
+.sidebar {
+  background: #f48409;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  flex-shrink: 0;
+  width: 251px;
+  height: 900px;
+  position: relative;
+}
+.bottom-header {
+    background: #1c172b;
+    width: 100%;
+    height: 215.27px;
+    position: absolute;
+    left: -30.2px;
+    top: 5010.09px;
+    transform-origin: 0 0;
+    transform: rotate(0.272deg) scale(1, 1);
+  }
+  .your-guide-to-near-by-culinary-treasures2 {
+    color: #fdeac8;
+    text-align: left;
+    font-family: "Kodchasan-Regular", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    left: 475px;
+    bottom: 51.01%;
+    top: 36.91%;
+    height: 12.08%;
+    transform-origin: 0 0;
+    transform: rotate(0deg) scale(1, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .click-here-to-know-more-about-us {
+    color: #fdeac8;
+    text-align: left;
+    font-family: "Kodchasan-Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: calc(50% - 148.89px);
+    bottom: 11.88%;
+    top: 77.43%;
+    height: 10.68%;
+    transform-origin: 0 0;
+    transform: rotate(0deg) scale(1, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .return-to-top {
+    color: #fdeac8;
+    text-align: left;
+    font-family: "Kodchasan-Medium", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    right: 8.63%;
+    left: 81.74%;
+    width: 9.63%;
+    bottom: 49.78%;
+    top: 38.14%;
+    height: 12.08%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .main-menu {
+    color: #fdeac8;
+    text-align: left;
+    font-family: "Kodchasan-Medium", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    right: 86.13%;
+    left: 6.18%;
+    width: 7.69%;
+    bottom: 49.78%;
+    top: 38.14%;
+    height: 12.08%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }

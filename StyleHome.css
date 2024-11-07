@@ -5,12 +5,13 @@
 .homepage {
   background: #ffffff;
   height: 1024px;
+  width: 100%;
   position: relative;
   transform-origin: 0 0;
   transform: rotate(-0.46deg) scale(1, 1);
 }
 .dall-e {
-  width: 100.35%;
+  width: 100%;
   height: 53.22%;
   position: absolute;
   right: -0.49%;
@@ -24,7 +25,7 @@
 .header {
   background: #1c172b;
   padding: 33px 21px 33px 21px;
-  width: 1445px;
+  width: 100%;
   height: 142px;
   position: absolute;
   left: 3.09px;
@@ -34,15 +35,14 @@
   overflow: hidden;
 }
 .Menu {
-  background: #fdeac8;
   width: 40px;
   height: 40px;
   position: absolute;
-  left: 66px;
+  left:15px;
   top: 50px;
   overflow: hidden;
 }
-.group {
+.group, .menugroup{
   width: 66.67%;
   height: 41.67%;
   position: absolute;
@@ -52,6 +52,135 @@
   top: 29.17%;
   overflow: visible;
 }
+.destination {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 17px;
+  top: 121px;
+}
+.destination2 {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.destgroup {
+  flex-shrink: 0;
+  width: 10px;
+  height: 5px;
+  position: relative;
+  overflow: visible;
+}
+.near-me {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 17px;
+  top: 182px;
+}
+.food {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 173px;
+  position: absolute;
+  left: 17px;
+  top: 243px;
+}
+.foods {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.foodgroup{
+  width: 41.67%;
+  height: 20.83%;
+  position: absolute;
+  right: 29.17%;
+  left: 29.17%;
+  bottom: 37.5%;
+  top: 41.67%;
+  overflow: visible;
+}
+.map {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 17px;
+  top: 304px;
+}
+.origin-of-quality {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 18px;
+  top: 365px;
+}
+.recipes {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 18px;
+  top: 426px;
+}
+.recipes2 {
+  color: #410a0c;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.recipegroup {
+  width: 41.67%;
+  height: 20.83%;
+  position: absolute;
+  right: 29.17%;
+  left: 29.17%;
+  bottom: 37.5%;
+  top: 41.67%;
+  overflow: visible;
+}
+.feedback {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 18px;
+  top: 487px;
+}
+.dropicon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
 .Login {
   display: flex;
   flex-direction: row;
@@ -59,7 +188,8 @@
   align-items: center;
   justify-content: flex-start;
   position: absolute;
-  left: 1263px;
+  right:0.5%;
+  left: 1125px;
   top: 50px;
 }
 .login {
@@ -73,7 +203,7 @@
   align-items: center;
   justify-content: center;
 }
-.group2 {
+.logingroup {
   flex-shrink: 0;
   width: 35px;
   height: 35px;
@@ -84,10 +214,10 @@
   color: #fdeac8;
   text-align: left;
   font-family: "Kodchasan-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   position: absolute;
-  left: 501px;
+  left: 475px;
   top: 85px;
   width: 456px;
   height: 32px;
@@ -99,10 +229,21 @@
   width: 230px;
   height: 167px;
   position: absolute;
-  left: 584px;
+  left: 500px;
   top: -5px;
+  box-align: center;
   object-fit: cover;
 }
+.sidebar {
+  background: #f48409;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  flex-shrink: 0;
+  width: 251px;
+  height: 900px;
+  position: relative;
+}
+
 .rectangle_dishes {
   background: #030303;
   border-radius: 50px;
@@ -166,7 +307,8 @@
   -webkit-text-stroke: 1px #000000;
 }
 .rectangle_maps {
-  border-radius: 0px;
+  background: #030303;
+  border-radius: 50px;
   opacity: 0.75;
   width: 23.28%;
   height: 3.75%;
@@ -175,6 +317,7 @@
   left: 38.85%;
   bottom: 40.96%;
   top: 55.29%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   /*transform: translate(-2.4px, -2.07px);
   overflow: visible;*/
 }
@@ -194,7 +337,12 @@
   height: 0.95%;
   -webkit-text-stroke: 1px #000000;
 }
-
+.image_bb, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7 {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 600px; /* Set a maximum width */
+  object-fit: cover; /* Ensure images cover the area */
+}
 .trending {
   width: 511.38px;
   height: 68.08px;
@@ -204,7 +352,7 @@
   transform-origin: 0 0;
   transform: rotate(0.035deg) scale(1, 1);
 }
-.rectangle-10 {
+.trending1 {
   background: #d9d9d9;
   opacity: 0.01;
   width: 99.91%;
@@ -238,7 +386,7 @@
   left: -359.26px;
   top: 2025.47px;
 }
-.rectangle-11 {
+.local-dishes1 {
   background: #d9d9d9;
   opacity: 0.01;
   width: 99.84%;
@@ -267,7 +415,7 @@
   transform-origin: 0 0;
   transform: rotate(1.737deg) scale(1, 1);
 }
-.frame-5 {
+.andhracc1 {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -277,7 +425,7 @@
   transform: rotate(0.46deg) scale(1, 1);
   overflow: hidden;
 }
-.andhra-chicken-curry {
+.andhracc2{
   color: #000000;
   text-align: left;
   font-family: "FugazOne-Regular", sans-serif;
@@ -290,7 +438,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.spicy-and-rich-chicken-curry-with-a-blend-of-spices-often-served-with-rice-or-dosa {
+.desc_andhracc {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -305,7 +453,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.image-1 {
+.image_bb {
   width: 374px;
   height: 315px;
   position: absolute;
@@ -353,7 +501,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.baingan-bharta {
+.bb1 {
   color: #000000;
   text-align: left;
   font-family: "FredokaOne-Regular", sans-serif;
@@ -367,7 +515,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.bainganbharta {
+.desc_bb {
   color: #000000;
   text-align: left;
   font-family: "Fustat-Regular", sans-serif;
@@ -375,14 +523,14 @@
   line-height: 40px;
   font-weight: 400;
   position: absolute;
-  left: 87.86px;
-  top: 1389.52px;
-  width: 617px;
+  left: -30px;
+  top: 1390.52px;
+  width: 673px;
   height: 126px;
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-noodle-soup-with-vegetables-meat-usually-pork-and-a-flavorful-broth-commonly-eaten-in-arunachal-pradesh {
+.desc_thukpa {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -442,7 +590,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.this-popular-snack-is-made-from-soaked-sago-pearls-mashed-potatoes-peanuts-green-chilies-and-spices-it-s-often-served-with-green-chutney-sweet-yogurt-or-tamarind-chutney {
+.desc_sabudanavada {
   color: #000000;
   text-align: left;
   font-family: "Fustat-Regular", sans-serif;
@@ -491,7 +639,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-tangy-spicy-noodle-soup-with-fish-influenced-by-the-flavors-of-the-region-and-typically-made-with-a-tamarind-based-broth {
+.desc_assamlaksa {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -517,7 +665,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom {
+.desc_masalachai {
   color: #000000;
   text-align: left;
   font-family: "-", sans-serif;
@@ -531,13 +679,13 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom-span {
+.desc_masalachai-span {
   color: #000000;
   font-family: "Fustat-Regular", sans-serif;
   font-size: 32px;
   font-weight: 400;
 }
-.a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom-span2 {
+.desc_masalachai-span2 {
   color: #000000;
   font-family: "FredokaOne-Regular", sans-serif;
   font-size: 32px;
@@ -610,7 +758,7 @@
   transform: rotate(0.46deg) scale(1, 1);
   object-fit: cover;
 }
-.litti-wheat-balls-stuffed-with-roasted-gram-flour-and-chokha-a-mashed-vegetable-side-dish-typically-made-with-eggplant-tomato-and-potatoes {
+.desc_littichoka {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -638,7 +786,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-savory-pastry-stuffed-with-spicy-chickpeas-often-served-as-a-snack-with-chutney {
+.desc_chanasamosa {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -668,7 +816,7 @@
 }
 .bottom-header {
   background: #1c172b;
-  width: 1442.71px;
+  width: 1235px;
   height: 215.27px;
   position: absolute;
   left: -30.2px;
@@ -766,7 +914,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-coconut-milk-based-curry-with-local-fish-infused-with-goan-spices-served-with-steamed-rice {
+.desc_goafishcurry {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -780,7 +928,7 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
 }
-.a-spicy-mashed-dish-made-with-vegetables-and-fermented-fish-typically-served-with-rice {
+.desc_eromba {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -818,7 +966,7 @@
   transform: rotate(0.46deg) scale(1, 1);
   object-fit: cover;
 }
-.a-spiced-rice-and-lentil-dish-cooked-with-vegetables-often-served-with-a-side-of-crispy-papad {
+.desc_bisibelebath {
   color: #000000;
   text-align: center;
   font-family: "Fustat-Regular", sans-serif;
@@ -871,4 +1019,30 @@
   transform-origin: 0 0;
   transform: rotate(0.46deg) scale(1, 1);
   object-fit: cover;
+}
+/*.horizontal_scroll_1{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  left: 82.56px;
+  top: 2797.2px;
+  width:100%;
+}
+.horizontal_scroll_1 > div {
+  flex: 0 0 auto; /* Prevents flex items from growing */
+  /*width: 300px; /* Set width for each item */
+  /*margin-right: 10px; /* Space between items */
+/*}*/
+.horizontal_scroll_1 {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+.horizontal_scroll_1{
+  min-width: 200px;
+  margin-right: 20px;
+  scroll-snap-align: start;
+  text-align: center;
 }

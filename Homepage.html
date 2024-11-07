@@ -6,161 +6,246 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./StyleHome.css" />
-
+    <title>Homepage-Zaika</title>
     <style>
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
+      .overlay {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        top: 0; /* Stay at the top */
+        left: 0; /* Stay at the left */
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        z-index: 1005; /* Sit on top */
+      }
+      .z-sidebar,.z-sidebar * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-
-        -webkit-font-smoothing: antialiased;
+      }
+      .z-sidebar {
+        position: absolute; /* Use absolute positioning */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        transform: translateX(-100%); /* Start hidden */
+        transition: transform 0.3s ease; /* Animation */
+        background: #d9d9d9;
+        border-radius: 10px;
+        padding: 74px 0px 74px 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        width: 272px;
+        height: 900px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        z-index: 1010; /* Ensure sidebar is below the overlay */
+      }
+      .z-sidebar.active {
+        transform: translateX(0); /* Slide in */
+      }
+      .popup {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
       }
 
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+      .popup-content {
+          background-color: #fefefe;
+          margin: 15% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }
+      #loginButton {
+          background-color: #4CAF50; /* Green background */
+          color: white; /* White text */
+          padding: 15px 20px; /* Top and bottom, left and right padding */
+          text-align: center; /* Center the text */
+          text-decoration: none; /* Remove underline */
+          display: inline-block; /* Inline-block for padding */
+          font-size: 16px; /* Font size */
+          margin: 10px 2px; /* Margin around the button */
+          cursor: pointer; /* Pointer cursor on hover */
+          border: none; /* No border */
+          border-radius: 5px; /* Rounded corners */
+          transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+          position:absolute;
+          right: 15px;
+          top: 32px;
+      }
+
+      #loginButton:hover {
+          background-color: #064809; /* Darker green on hover */
       }
     </style>
-    <title>Homepage-Zaika</title>
   </head>
   <body>
+    <div class="overlay" id="sidebarOverlay"></div>
+    <div class="z-sidebar">
+      <div class="sidebar">
+        <div class="Menu">
+          <a href="Homepage.html">
+          <img class="menugroup" src="/images/menuicon.png" />
+          </a>
+        </div>
+        <div class="destination">
+          <div class="destination2">Destination</div>
+          <img class="destgroup" src="/images/dropicon.png" />
+        </div>
+        <div class="near-me">Near Me</div>
+        <div class="feedback">Feedback</div>
+        <div class="food">
+          <div class="foods">Foods</div>
+          <div class="dropicon">
+            <img class="foodgroup" src="/images/dropicon.png" />
+          </div>
+        </div>
+        <div class="map">Map</div>
+        <div class="origin-of-quality">Origin of Quality</div>
+        <div class="recipes">
+          <div class="recipes2">Recipes</div>
+          <div class="dropicon">
+            <img class="recipegroup" src="/images/dropicon.png" />
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="homepage">
       <img
         class="dall-e"
-        src="dalle.webp"/>
+        src="/images/dalle.webp"/>
       <div class="header">
-        <div class="Menu">
-          <a href="Sidebar.html">
-          <img class="group" src="menuicon.png" />
-          </a>
+        <div class="Menu" id ="menuIcon">
+          <img class="group" src="/images/menuicon.png" />
         </div>
-        <div class="Login">
-          <a href="loginpage.html">
+        <button id="loginButton">Login</button>
+        <!--<div class="Login">
+          <a href="loginfinal.html">
           <div class="login">Login</div>
-          <img class="group2" src="login.png" />
+          <img class="logingroup" src="login.png" />
           </a>
-        </div>
+        </div>-->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+              <span class="close" id="closePopup">&times;</span>
+              <h2>Select Login Option</h2>
+              <button id="adminLogin">Admin Login</button>
+              <button id="userLogin">User Login</button>
+              <button id="signUp">Sign Up</button>
+          </div>
+      </div>
         <div class="subtitle">
           Your Guide to near by Culinary Treasures
         </div>
         <img
           class="Mainlogo"
-          src="mainlogo.png"
+          src="/images/mainlogo.png"
         />
       </div>
       <div class="rectangle_location"></div>
-      <img class="rectangle_maps" src="rectangle-300.svg" />
+      <img class="rectangle_maps" src="/images/rectangle-300.svg" />
       <div class="rectangle_dishes"></div>
       <div class="search-locations">Search Locations</div>
       <div class="explore-maps">Explore Maps</div>
       <div class="search-dishes">Search Dishes</div>
       <div class="trending">
-        <div class="rectangle-10"></div>
+        <div class="trending1"></div>
         <div class="trending2">TRENDING...</div>
       </div>
-      <div class="local-dishes">
-        <div class="rectangle-11"></div>
+      <img class="image_bb" src="/images/baingan.jpg" />
+      <div class="image1r1c"></div>
+      <div class="_1">1</div>
+      <div class="bb1">Baingan Bharta</div>
+      <div class="desc_bb">
+        This hearty vegetarian dish is made with grilled eggplant, tomatoes,
+        onions, herbs, and spices.It is often served with flatbread, rice,
+        and raita.
       </div>
+      <img class="image-2" src="/images/vada.webp" />
+      <div class="image1r2c"></div>
+      <div class="_2">2</div>
+      <div class="sabudana-vada">Sabudana Vada</div>
+      <div class="desc_sabudanavada">
+        This popular snack is made from soaked sago pearls, mashed potatoes,
+        peanuts, green chilies, and spices.It is often served with green
+        chutney, sweet yogurt, or tamarind chutney
+      </div>
+      <img class="image-3" src="/images/chai.avif" />
+      <div class="image2rmiddle"></div>
+      <div class="_3">3</div>
+      <div class="desc_masalachai">
+        <span>
+          <span
+            class="desc_masalachai-span"
+          >
+            A staple beverage during the rainy season, made with Indian spices
+            like cinnamon and cardamom.
+          </span>
+          <span
+            class="desc_masalachai-span2"
+          >
+          </span>
+        </span>
+      </div>
+      <div class="masala-chai">Masala chai</div>
+      <div class="local-dishes">
+        <div class="local-dishes1"></div>
+      </div>
+      <div class="horizontal_scroll_1"></div>
       <div class="local-dishes2">Local dishes</div>
-      <div class="frame-5"></div>
-      <div class="andhra-chicken-curry">Andhra Chicken Curry</div>
-      <div
-        class="spicy-and-rich-chicken-curry-with-a-blend-of-spices-often-served-with-rice-or-dosa"
-      >
+      <div class="andhracc1"></div>
+      <div class="andhracc2">Andhra Chicken Curry</div>
+      <div class="desc_andhracc">
         Spicy and rich chicken curry with a blend of spices, often served with
         rice or dosa.
         <br />
         <br />
       </div>
-      <img class="image-1" src="baingan.jpg" />
-      <div class="image1r1c"></div>
-      <div class="_1">1</div>
       <div class="thukpa">Thukpa</div>
-      <div class="baingan-bharta">Baingan Bharta</div>
-      <div class="baiganbharta">
-        This hearty vegetarian dish is made with grilled eggplant, tomatoes,
-        onions, herbs, and spices.It is often served with flatbread, rice,
-        and raita.
-      </div>
-      <div
-        class="a-noodle-soup-with-vegetables-meat-usually-pork-and-a-flavorful-broth-commonly-eaten-in-arunachal-pradesh"
-      >
+      <div class="desc_thukpa">
         A noodle soup with vegetables, meat (usually pork), and a flavorful
         broth,
         <br />
         commonly eaten in Arunachal Pradesh.
         <br />
       </div>
-      <img class="image-2" src="vada.webp" />
-      <div class="image1r2c"></div>
-      <div class="_2">2</div>
-      <div class="sabudana-vada">Sabudana Vada</div>
-      <div
-        class="this-popular-snack-is-made-from-soaked-sago-pearls-mashed-potatoes-peanuts-green-chilies-and-spices-it-s-often-served-with-green-chutney-sweet-yogurt-or-tamarind-chutney"
-      >
-        This popular snack is made from soaked sago pearls, mashed potatoes,
-        peanuts, green chilies, and spices. It is often served with green
-        chutney, sweet yogurt, or tamarind chutney
-      </div>
-      <img class="image-3" src="chai.avif" />
-      <div class="image2rmiddle"></div>
-      <div class="assam-laksa">
-        Assam Laksa
-        <br />
-      </div>
-      <div
-        class="a-tangy-spicy-noodle-soup-with-fish-influenced-by-the-flavors-of-the-region-and-typically-made-with-a-tamarind-based-broth"
-      >
+      <div class="assam-laksa">Assam Laksa<br /></div>
+      <div class="desc_assamlaksa">
         A tangy, spicy noodle soup with fish, influenced by the flavors of the
         region, and typically made with a tamarind-based broth.
         <br />
         <br />
       </div>
-      <div class="_3">3</div>
-      <div
-        class="a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom"
-      >
-        <span>
-          <span
-            class="a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom-span"
-          >
-            A staple beverage during the rainy season, made with Indian spices
-            like cinnamon and cardamom.
-          </span>
-          <span
-            class="a-staple-beverage-during-the-rainy-season-made-with-indian-spices-like-cinnamon-and-cardamom-span2"
-          >
-             
-          </span>
-        </span>
-      </div>
-      <div class="masala-chai">Masala chai</div>
       <div class="litti-chokha">
         Litti Chokha
         <br />
       </div>
-      <img class="image-7" src="litti.jpg" />
-      <img class="image-6" src="assamlaksa.jpg" />
-      <img class="image-5" src="thukpa.jpg" />
-      <img class="image-4" src="andhrachickencurry.jpg" />
-      <div
-        class="litti-wheat-balls-stuffed-with-roasted-gram-flour-and-chokha-a-mashed-vegetable-side-dish-typically-made-with-eggplant-tomato-and-potatoes"
-      >
+      <img class="image-7" src="/images/litti.jpg" />
+      <img class="image-6" src="/images/assamlaksa.jpg" />
+      <img class="image-5" src="/images/thukpa.jpg" />
+      <img class="image-4" src="/images/andhrachickencurry.jpg" />
+      <div class="desc_littichoka">
         Litti (wheat balls stuffed with roasted gram flour) and chokha (a mashed
         vegetable side dish, typically made with eggplant, tomato, and
         potatoes).
@@ -170,9 +255,7 @@
         Chana Samosa
         <br />
       </div>
-      <div
-        class="a-savory-pastry-stuffed-with-spicy-chickpeas-often-served-as-a-snack-with-chutney"
-      >
+      <div class="desc_chanasamosa">
         A savory pastry stuffed with spicy chickpeas, often served as a snack
         with chutney.
         <br />
@@ -195,16 +278,12 @@
         Goan Fish Curry and Rice
         <br />
       </div>
-      <div
-        class="a-coconut-milk-based-curry-with-local-fish-infused-with-goan-spices-served-with-steamed-rice"
-      >
+      <div class="desc_goafishcurry">
         A coconut milk-based curry with local fish, infused with Goan spices,
         served with steamed rice.
         <br />
       </div>
-      <div
-        class="a-spicy-mashed-dish-made-with-vegetables-and-fermented-fish-typically-served-with-rice"
-      >
+      <div class="desc_eromba">
         A spicy mashed dish made with vegetables and fermented fish, typically
         served with rice.
         <br />
@@ -214,18 +293,81 @@
         Bisi Bele Bath
         <br />
       </div>
-      <img class="image-10" src="bisibele.jpg" />
-      <div
-        class="a-spiced-rice-and-lentil-dish-cooked-with-vegetables-often-served-with-a-side-of-crispy-papad"
-      >
+      <img class="image-10" src="/images/bisibele.jpg" />
+      <div class="desc_bisibelebath">
         A spiced rice and lentil dish cooked with vegetables, often served with
         a side of crispy papad.
         <br />
       </div>
       <div class="top-rectangle"></div>
-      <img class="image-8" src="chanasamosa.jpg" />
-      <img class="image-9" src="goa.jpg" />
-      <img class="image-11" src="eromba.webp" />
-    </div>
+      <img class="image-8" src="/images/chanasamosa.jpg" />
+      <img class="image-9" src="/images/goa.jpg" />
+      <img class="image-11" src="/images/eromba.webp" />
+      </div>
+      </div>
+    <script>
+      const menuIcon = document.getElementById('menuIcon');
+      const sidebar = document.querySelector('.z-sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      menuIcon.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          overlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+      });
+
+      overlay.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          overlay.style.display = 'none';
+      });
+      const horizontal_scroll_1 = document.querySelector('.horizontal_scroll_1');
+      const scrollLeft = () => {
+        horizontal_scroll_1.scrollBy({
+          top: 0,
+          left: -200, // Adjust scroll amount
+          behavior: 'smooth'
+        });
+      };
+
+      const scrollRight = () => {
+        horizontal_scroll_1.scrollBy({
+            top: 0,
+            left: 200, // Adjust scroll amount
+            behavior: 'smooth'
+          });
+      };
+
+      // Example buttons (you can create and style your buttons in HTML/CSS)
+      document.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowLeft') scrollLeft();
+          if (event.key === 'ArrowRight') scrollRight();
+      });
+      document.getElementById('loginButton').onclick = function() {
+      document.getElementById('popup').style.display = 'block';
+      }
+
+      document.getElementById('closePopup').onclick = function() {
+          document.getElementById('popup').style.display = 'none';
+      }
+
+      window.onclick = function(event) {
+          if (event.target == document.getElementById('popup')) {
+              document.getElementById('popup').style.display = 'none';
+          }
+      }
+
+      document.getElementById('adminLogin').onclick = function() {
+          window.location.href = 'adminlogin.html'; // Redirect to admin login page
+      }
+
+      document.getElementById('userLogin').onclick = function() {
+          window.location.href = 'loginfinal.html'; // Redirect to user login page
+      }
+
+      document.getElementById('signUp').onclick = function() {
+          window.location.href = 'sign_up.html'; // Redirect to sign up page
+      }
+
+
+  </script>
   </body>
 </html>

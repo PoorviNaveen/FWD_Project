@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./stylelogin.css" />
+    <title>AdminLoginpage-Zaika</title>
+    <style>
+      .overlay {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        top: 0; /* Stay at the top */
+        left: 0; /* Stay at the left */
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        z-index: 1005; /* Sit on top */
+      }
+      .z-sidebar,.z-sidebar * {
+        box-sizing: border-box;
+      }
+      .z-sidebar {
+        position: absolute; /* Use absolute positioning */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        transform: translateX(-100%); /* Start hidden */
+        transition: transform 0.3s ease; /* Animation */
+        background: #d9d9d9;
+        border-radius: 10px;
+        padding: 74px 0px 74px 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        width: 272px;
+        height: 900px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        z-index: 1010; /* Ensure sidebar is below the overlay */
+      }
+      .z-sidebar.active {
+        transform: translateX(0); /* Slide in */
+      }
+      .homepage,
+      .homepage * {
+        box-sizing: border-box;
+      }
+      .homepage {
+        background: #ffffff;
+        height: 1024px;
+        width: 100%;
+        position: relative;
+        transform-origin: 0 0;
+        transform: rotate(-0.46deg) scale(1, 1);
+      }
+
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+        }
+        .login-form {
+          width: 300px;
+          margin: 100px auto;
+          padding: 30px;
+          background-color: white;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        }
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        input {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        .submit-btn {
+          background-color: green;
+          color: white;
+          border: none;
+          padding: 10px;
+          width: 100%;
+          cursor: pointer;
+        }
+        .cancel-btn {
+          background-color: red;
+          color: white;
+          border: none;
+          padding: 10px;
+          width: 100%;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="overlay" id="sidebarOverlay"></div>
+    <div class="z-sidebar">
+        <div class="sidebar">
+            <div class="Menu">
+                <a href="Homepage.html">
+                <img class="menugroup" src="/images/menuicon.png" />
+                </a>
+            </div>
+            <div class="destination">
+                <div class="destination2">Destination</div>
+                    <img class="destgroup" src="/images/dropicon.png" />
+                </div>
+            <div class="near-me">Near Me</div>
+            <div class="feedback">Feedback</div>
+                <div class="food">
+                    <div class="foods">Foods</div>
+                    <div class="dropicon">
+                        <img class="foodgroup" src="/images/dropicon.png" />
+                    </div>
+                </div>
+                <div class="map">Map</div>
+                <div class="origin-of-quality">Origin of Quality</div>
+                <div class="recipes">
+                    <div class="recipes2">Recipes</div>
+                    <div class="dropicon">
+                        <img class="recipegroup" src="/images/dropicon.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homepage">
+            <div class="login-form">
+                <h2>Admin Login Page</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Enter Username" required />
+                    <input type="email" id="email" placeholder="Enter Email" required />
+                    <input type="password" id="password" placeholder="Enter Password" required />
+                    <button class="submit-btn" type="submit">Submit</button>
+                    <button class="cancel-btn" type="button" onclick="cancelForm()">Cancel</button>
+                </form>
+            </div>
+            <div class="header">
+                <div class="Menu" id ="menuIcon">
+                    <img class="group" src="/images/menuicon.png" />
+                </div>
+                <div class="Back">
+                    <a href="Homepage.html">Back</a>
+                    <img src="/images/crossicon.png" alt="Back" />
+                  </div>
+                <div class="subtitle">
+                    Your Guide to near by Culinary Treasures
+                </div>
+                <img
+                class="Mainlogo"
+                src="/images/mainlogo.png"
+                />
+            </div>
+            <div class="bottom-header">
+                <div class="your-guide-to-near-by-culinary-treasures2">
+                  Your Guide to near by Culinary Treasures
+                </div>
+                <div class="click-here-to-know-more-about-us">
+                  Click here to know more about us
+                </div>
+                <div class="return-to-top">Return to Top</div>
+                <div class="main-menu">Main Menu</div>
+                <a href="Sidebar.html">
+                <img class="Mainlogo" src="/images/mainlogo.png"/>
+              </a>
+              </div>
+            
+        <script>
+            const menuIcon = document.getElementById('menuIcon');
+      const sidebar = document.querySelector('.z-sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      menuIcon.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          overlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+      });
+
+      overlay.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          overlay.style.display = 'none';
+      });
+
+            // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const username = document.getElementById('username').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+  
+          fetch('http://localhost:3001/api/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, email, password }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('Success:', data);
+              alert(data.message); // Show success message from the server
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+        });
+  
+        // Handle form cancel
+        function cancelForm() {
+          document.getElementById('loginForm').reset();
+        }
+        </script>
+    </body>
+</html>
